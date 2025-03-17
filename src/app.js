@@ -29,9 +29,6 @@ window.onload = function () {
       }
     }
   }
-
-  
-
   document.getElementById("email").innerHTML = "<ul>" + listOfEmails.map(email => `<li>${email}</li>`).join('') + "</ul>";
 
 };
