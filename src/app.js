@@ -5,36 +5,34 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = function() {
-  //write your code here
-  let pronoun = ['the', 'our']; //arr1 --> i
-  let adj = ['great', 'big', 'fantastic']; //arr2 --> j
-  let noun = ['jogger', 'racoon', 'bayonet', 'aches']; //arr3 --> k
-  let domain = ['.com', '.es', '.net'] //arr4 ---> l
+window.onload = function () {
 
-//function listOfEMails() { esto es el extra 
-  for (let i in pronoun){
-    for (let j in adj){  
+  let pronoun = ['the', 'our']; 
+  let adj = ['great', 'big', 'fantastic'];
+  let noun = ['jogger', 'racoon', 'brunches']; 
+  let domain = ['.com', '.es', '.er'] 
+
+  let listOfEmails = [];
+
+  for (let i in pronoun) {
+    for (let j in adj) {
       for (let k in noun) {
         for (let l in domain) {
-           pronoun[i] + adj[j] + noun[k] + domain[l];
-           // si el final del los elementos del array [noun] es igual al final de los elementos del array [domain] 
-           // entonces genera un string en el que las dos ultimas letras de los elementos del array [noun] desaparezcan 
-          // if 
-          
-        console.log(pronoun[i] + adj[j] + noun[k] + domain[l]);        
-          
+          let email = pronoun[i] + adj[j] + noun[k] + domain[l];
+
+          if (noun[k].endsWith(domain[l].slice(-2))) {
+            email = pronoun[i] + adj[j] + noun[k].slice(0, -2) + domain[l];
+          }
+
+          listOfEmails.push(email);
         }
       }
     }
   }
- // return (extra)
-// }
 
+  
 
-//document.getElementById("email").innerHTML = listOfEMails(); (extra)
-
-
+  document.getElementById("email").innerHTML = "<ul>" + listOfEmails.map(email => `<li>${email}</li>`).join('') + "</ul>";
 
 };
 

@@ -15,11 +15,19 @@
     />
   </head>
   <body>
-    <!-- Write your HTML code here, you can delete everything withing the body tags -->
-    <p onload ="listOfEMails()" id="email"></p>
-    
+     <div class="container border mt-5 bg-light pt-3 pb-2">
+       
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          List of emails
+        </button>
+        <div id="emailHelp" class="form-text">Click to view the email list</div>
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          <p onload ="listOfEMails()" id="email"></p>
+        </div>
+ 
    
-    <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
     <script type="module" src="/app.js"></script>
   </body>
 </html>
