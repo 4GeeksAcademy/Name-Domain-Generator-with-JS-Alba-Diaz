@@ -7,10 +7,10 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function () {
 
-  let pronoun = ['the', 'our']; 
+  let pronoun = ['the', 'our'];
   let adj = ['great', 'big', 'fantastic'];
-  let noun = ['jogger', 'racoon', 'brunches']; 
-  let domain = ['.com', '.es', '.er'] 
+  let noun = ['jogger', 'racoon', 'brunches'];
+  let domain = ['.com', '.es', '.er']
 
   let listOfEmails = [];
 
